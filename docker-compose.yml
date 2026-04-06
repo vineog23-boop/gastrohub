@@ -1,0 +1,33 @@
+version: '3,9'
+
+volumes:
+  mysql_data: {}
+
+services:
+ mysql:
+   image:
+     mysql:8.0
+   restart: always
+   volumes:
+     - mysql_data:/var/lib/mysql
+   environment:
+     MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+     MYSQL_DATABASE: ${DB_NAME}
+     MYSQL_USER: ${DB_USER}
+     MYSQL_PASSWORD: ${DB_PASSWORD}
+   ports:
+     - "3309:3306"
+ app:
+   depends_on:
+     - mysql
+   build:
+     context: .
+     dockerfile: Dockerfile
+   ports:
+     - "8080:8080"
+   environment:
+     SPRING_DATASOURCE_URL: jdbc:mysql://mysql:${DB_PORT}/${DB_NAME}
+     SPRING_DATASOURCE_USERNAME: ${DB_USER}
+     SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+     SPRING_JPA_HIBERNATE_DDL_AUTO: update
+
