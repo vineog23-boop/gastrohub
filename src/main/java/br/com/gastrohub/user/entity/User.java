@@ -2,10 +2,16 @@ package br.com.gastrohub.user.entity;
 
 import br.com.gastrohub.user.entity.enums.Role;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "users",
         uniqueConstraints = {
@@ -30,14 +36,23 @@ public class User {
     @Column(name = "senha", length = 255, nullable = false)
     private String senha;
 
-    @Column(name = "data_ultima_alteracao")
-    private Date dataUltimaAlteracao;
+    @Column(name = "data_ultima_alteracao", nullable = false)
+    private LocalDateTime dataUltimaAlteracao;
 
     @Embedded
     private Endereco endereco;
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "role", length = 30, nullable = false)
     private Role role;
 
+    @PrePersist
+    protected void onCreate() {
+        this.dataUltimaAlteracao = LocalDateTime.now();
+    }
 
+    @PreUpdate
+    protected void onUpdate() {
+        this.dataUltimaAlteracao = LocalDateTime.now();
+    }
 }
