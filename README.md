@@ -1,8 +1,8 @@
 <h1 align="center">🍽️ GastroHub</h1>
-<p align="center">Backend em Java + Spring Boot para gerenciamento de usuários</p>
----
-## 📌 Sobre o projeto
-O **GastroHub** é um projeto backend desenvolvido para o **Tech Challenge da FIAP**.
+<p align="center">
+  Backend em Java + Spring Boot para gerenciamento de usuários em uma plataforma de restaurantes
+</p>
+
 <p align="center">
   <img src="https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk" alt="Java 21"/>
   <img src="https://img.shields.io/badge/Spring_Boot-4.0.5-brightgreen?style=for-the-badge&logo=springboot" alt="Spring Boot 4.0.5"/>
@@ -13,7 +13,19 @@ O **GastroHub** é um projeto backend desenvolvido para o **Tech Challenge da FI
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
 </p>
+
+---
+
+## 📌 Sobre o projeto
+
+O **GastroHub** é um projeto backend desenvolvido para o **Tech Challenge da FIAP**, com foco atual no gerenciamento de usuários em uma plataforma de restaurantes compartilhada.
+
+A proposta do projeto é evoluir uma aplicação Java/Spring com **persistência**, **segurança**, **validação**, **organização em camadas** e estrutura preparada para entrega acadêmica e técnica.
+
+---
+
 ## ✅ Funcionalidades atuais
+
 - Cadastro de usuários
 - Atualização de dados do usuário
 - Alteração de senha em endpoint separado
@@ -21,7 +33,11 @@ O **GastroHub** é um projeto backend desenvolvido para o **Tech Challenge da FI
 - Validação de login
 - Garantia de e-mail único
 - Registro da data da última atualização
+
+---
+
 ## 🧱 Stack utilizada
+
 - **Java 21**
 - **Spring Boot 4.0.5**
 - **Spring Data JPA**
@@ -32,7 +48,11 @@ O **GastroHub** é um projeto backend desenvolvido para o **Tech Challenge da FI
 - **Spring Mail**
 - **MySQL**
 - **Docker / Docker Compose**
-## 📂 Estrutura do projeto
+
+---
+
+## 🏛️ Estrutura do projeto
+
 ```text
 src/
  ├── controller
@@ -44,32 +64,56 @@ src/
  ├── config
  └── exception
 ```
+
+---
+
 ## ⚙️ Como executar
-### Pré-requisitos
+
+**Pré-requisitos**
 - Java 21
 - Maven
 - MySQL
 - Docker e Docker Compose (opcional)
-### Execução local
+
+**Execução local**
 ```bash
 git clone https://github.com/vineog23-boop/gastrohub.git
 cd gastrohub
 mvn clean install
 mvn spring-boot:run
 ```
-## 🐳 Sobre Docker
-O projeto possui:
-- Dockerfile multi-stage
+
+---
+
+## 🐳 Infraestrutura
+
+O projeto já possui:
+- Dockerfile
 - docker-compose.yml
-Atualmente, a infraestrutura já está iniciada, mas a configuração da aplicação e do ambiente ainda precisa de alinhamento fino.
-## 📝 Observações importantes
-- O application.properties atual ainda utiliza configuração de datasource hardcoded
-- O projeto está em evolução
+
+No estado atual do repositório, a infraestrutura já foi iniciada, mas a configuração da aplicação e do ambiente ainda precisa de alinhamento fino para uma execução mais padronizada.
+
+---
+
+## 📝 Observações
+
+- O `application.properties` atual ainda utiliza configuração de datasource hardcoded
+- O projeto segue em evolução
+- Este README descreve o que já está presente no repositório hoje, sem antecipar funcionalidades não confirmadas
+
+---
+
 ## 🎯 Objetivos técnicos trabalhados
+
 - Organização em camadas
 - Persistência com JPA
 - Validação de dados
-- Estruturação de exceptions
+- Estruturação de exceções
 - Segurança com Spring Security
+- Documentação técnica acadêmica
+
+---
+
 ## 👨‍💻 Autor
-Desenvolvido por Vinícius Oliveira Gonçalves como parte da formação em Java backend.
+
+Desenvolvido por **Vinícius Oliveira Gonçalves** como parte da formação em Java backend e da entrega do Tech Challenge — FIAP.
