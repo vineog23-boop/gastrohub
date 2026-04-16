@@ -66,3 +66,11 @@ mvn clean install
 mvn spring-boot:run
 
 > Antes de subir a aplicação, revise as configurações de banco em src/main/resources/application.properties.
+
+Observações importantes
+
+Este README descreve apenas o que está presente no código e nos arquivos de configuração atuais do repositório. Funcionalidades futuras devem ser marcadas como pendentes até estarem realmente implementadas.
+
+Autor
+
+Projeto desenvolvido por Vinícius Oliveira Gonçalves para o Tech Challenge da FIAP.
