@@ -44,3 +44,16 @@ src/
  ├── config
  └── exception
 ```
+## ⚙️ Como executar
+### Pré-requisitos
+- Java 21
+- Maven
+- MySQL
+- Docker e Docker Compose (opcional)
+### Execução local
+```bash
+git clone https://github.com/vineog23-boop/gastrohub.git
+cd gastrohub
+mvn clean install
+mvn spring-boot:run
+```
