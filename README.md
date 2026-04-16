@@ -57,3 +57,8 @@ cd gastrohub
 mvn clean install
 mvn spring-boot:run
 ```
+## 🐳 Sobre Docker
+O projeto possui:
+- Dockerfile multi-stage
+- docker-compose.yml
+Atualmente, a infraestrutura já está iniciada, mas a configuração da aplicação e do ambiente ainda precisa de alinhamento fino.
