@@ -47,3 +47,22 @@ o application.properties ainda usa datasource MySQL hardcoded
 a configuração de Docker e a configuração da aplicação ainda precisam ser alinhadas para um fluxo padrão de execução totalmente consistente
 
 Swagger/OpenAPI não foi identificado neste estado atual do repositório
+
+Como executar localmente
+
+Pré-requisitos
+
+Java 21
+
+Maven
+
+MySQL disponível localmente
+
+Passos
+
+git clone https://github.com/vineog23-boop/gastrohub.git
+cd gastrohub
+mvn clean install
+mvn spring-boot:run
+
+> Antes de subir a aplicação, revise as configurações de banco em src/main/resources/application.properties.
