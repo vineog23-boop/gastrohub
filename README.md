@@ -9,3 +9,15 @@ Backend em **Java + Spring Boot** desenvolvido para o **Tech Challenge da FIAP**
 - validação de login
 - garantia de e-mail único
 - registro da data da última atualização
+
+## Stack identificada no projeto
+- Java 21
+- Spring Boot 4.0.5
+- Spring Data JPA
+- Spring Security
+- Spring Validation
+- Spring MVC
+- Thymeleaf
+- Spring Mail
+- MySQL
+- Docker / Docker Compose
