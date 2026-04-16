@@ -13,3 +13,11 @@ O **GastroHub** é um projeto backend desenvolvido para o **Tech Challenge da FI
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
 </p>
+## ✅ Funcionalidades atuais
+- Cadastro de usuários
+- Atualização de dados do usuário
+- Alteração de senha em endpoint separado
+- Busca de usuários por nome
+- Validação de login
+- Garantia de e-mail único
+- Registro da data da última atualização
