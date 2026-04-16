@@ -32,3 +32,15 @@ O **GastroHub** é um projeto backend desenvolvido para o **Tech Challenge da FI
 - **Spring Mail**
 - **MySQL**
 - **Docker / Docker Compose**
+## 📂 Estrutura do projeto
+```text
+src/
+ ├── controller
+ ├── service
+ ├── repository
+ ├── entity
+ ├── dto
+ ├── mapper
+ ├── config
+ └── exception
+```
