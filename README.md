@@ -21,3 +21,17 @@ Backend em **Java + Spring Boot** desenvolvido para o **Tech Challenge da FIAP**
 - Spring Mail
 - MySQL
 - Docker / Docker Compose
+
+## Estrutura em alto nível
+
+```text
+src/
+ ├── controller
+ ├── service
+ ├── repository
+ ├── entity
+ ├── dto
+ ├── mapper
+ ├── config
+ └── exception
+```
