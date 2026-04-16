@@ -35,3 +35,15 @@ src/
  ├── config
  └── exception
 ```
+
+Estado atual da infraestrutura
+
+o projeto possui Dockerfile multi-stage
+
+o repositório possui docker-compose.yml
+
+o application.properties ainda usa datasource MySQL hardcoded
+
+a configuração de Docker e a configuração da aplicação ainda precisam ser alinhadas para um fluxo padrão de execução totalmente consistente
+
+Swagger/OpenAPI não foi identificado neste estado atual do repositório
