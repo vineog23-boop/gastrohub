@@ -21,3 +21,14 @@ O **GastroHub** é um projeto backend desenvolvido para o **Tech Challenge da FI
 - Validação de login
 - Garantia de e-mail único
 - Registro da data da última atualização
+## 🧱 Stack utilizada
+- **Java 21**
+- **Spring Boot 4.0.5**
+- **Spring Data JPA**
+- **Spring Security**
+- **Spring Validation**
+- **Spring MVC**
+- **Thymeleaf**
+- **Spring Mail**
+- **MySQL**
+- **Docker / Docker Compose**
