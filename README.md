@@ -62,3 +62,14 @@ O projeto possui:
 - Dockerfile multi-stage
 - docker-compose.yml
 Atualmente, a infraestrutura já está iniciada, mas a configuração da aplicação e do ambiente ainda precisa de alinhamento fino.
+## 📝 Observações importantes
+- O application.properties atual ainda utiliza configuração de datasource hardcoded
+- O projeto está em evolução
+## 🎯 Objetivos técnicos trabalhados
+- Organização em camadas
+- Persistência com JPA
+- Validação de dados
+- Estruturação de exceptions
+- Segurança com Spring Security
+## 👨‍💻 Autor
+Desenvolvido por Vinícius Oliveira Gonçalves como parte da formação em Java backend.
