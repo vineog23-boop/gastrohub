@@ -1,13 +1,10 @@
 package br.com.gastrohub.user.entity;
 
-import jakarta.persistence.Embeddable;
-
-@Embeddable
+/**
+ * @deprecated Substituído por {@link Address} (@Entity com tabela própria).
+ * Esta classe será removida ao final da Sprint 1.
+ */
+@Deprecated(since = "sprint-1", forRemoval = true)
 public class Endereco {
-
-    private String cep;
-    private String rua;
-    private String numero;
-    private String cidade;
-
+    // Classe descontinuada - use Address.java
 }
