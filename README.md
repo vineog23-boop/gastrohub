@@ -1,119 +1,107 @@
-<h1 align="center">🍽️ GastroHub</h1>
-<p align="center">
-  Backend em Java + Spring Boot para gerenciamento de usuários em uma plataforma de restaurantes
-</p>
+# 🍔 Lanchonete API
+(em homenagem ao estabelecimento do meu pai)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk" alt="Java 21"/>
-  <img src="https://img.shields.io/badge/Spring_Boot-4.0.5-brightgreen?style=for-the-badge&logo=springboot" alt="Spring Boot 4.0.5"/>
-  <img src="https://img.shields.io/badge/Spring_Data_JPA-blue?style=for-the-badge&logo=spring" alt="Spring Data JPA"/>
-  <img src="https://img.shields.io/badge/Spring_Security-2E8B57?style=for-the-badge&logo=springsecurity" alt="Spring Security"/>
-  <img src="https://img.shields.io/badge/Validation-0A7E07?style=for-the-badge" alt="Validation"/>
-  <img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=for-the-badge&logo=thymeleaf" alt="Thymeleaf"/>
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
-</p>
+Backend em Java + Spring Boot para gerenciamento de pedidos de uma lanchonete.
+
+![Java 21](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.4.x-brightgreen?style=for-the-badge&logo=springboot)
+![Spring Data JPA](https://img.shields.io/badge/Spring_Data_JPA-blue?style=for-the-badge&logo=spring)
+![H2](https://img.shields.io/badge/H2-Database-lightgrey?style=for-the-badge)
+![Validation](https://img.shields.io/badge/Validation-0A7E07?style=for-the-badge)
 
 ---
 
 ## 📌 Sobre o projeto
 
-O **GastroHub** é um projeto backend desenvolvido para o **Tech Challenge da FIAP**, com foco atual no gerenciamento de usuários em uma plataforma de restaurantes compartilhada.
+A **Lanchonete API** é uma API REST backend para gerenciamento completo de uma lanchonete — do cardápio ao pedido entregue.
 
-A proposta do projeto é evoluir uma aplicação Java/Spring com **persistência**, **segurança**, **validação**, **organização em camadas** e estrutura preparada para entrega acadêmica e técnica.
+O sistema diferencia pedidos de **balcão** (sem identificação de cliente) de pedidos de **entrega** (com cadastro de cliente e entregador). Um pedido percorre um ciclo de status bem definido: `ABERTO → EM_PREPARO → PRONTO → ENTREGUE`, com regras de negócio aplicadas em cada transição.
+
+Projeto desenvolvido para prática de Java backend com Spring Boot, aplicando arquitetura em camadas, persistência com JPA e boas práticas de API REST.
 
 ---
 
-## ✅ Funcionalidades atuais
+## ✅ Funcionalidades
 
-- Cadastro de usuários
-- Atualização de dados do usuário
-- Alteração de senha em endpoint separado
-- Busca de usuários por nome
-- Validação de login
-- Garantia de e-mail único
-- Registro da data da última atualização
+- Cadastro e gerenciamento de produtos (cardápio)
+- Cadastro de clientes para pedidos de entrega
+- Cadastro de entregadores
+- Abertura e gerenciamento de pedidos
+- Adição e remoção de itens em um pedido
+- Controle de status do pedido
+- Cálculo automático do total do pedido
+- Snapshot de preço no momento do pedido
+
+> 🚧 Endpoints em desenvolvimento — seção será atualizada em breve.
+
+---
+
+## 🔗 Endpoints
+
+> 🚧 Em desenvolvimento.
 
 ---
 
 ## 🧱 Stack utilizada
 
-- **Java 21**
-- **Spring Boot 4.0.5**
-- **Spring Data JPA**
-- **Spring Security**
-- **Spring Validation**
-- **Spring MVC**
-- **Thymeleaf**
-- **Spring Mail**
-- **MySQL**
-- **Docker / Docker Compose**
+| Tecnologia        | Uso                               |
+|-------------------|-----------------------------------|
+| Java 21           | Linguagem principal               |
+| Spring Boot 3.4.x | Framework base                    |
+| Spring Data JPA   | Persistência e mapeamento ORM     |
+| Spring Validation | Validação de dados de entrada     |
+| H2 Database       | Banco de dados em memória (dev)   |
+| Lombok            | Redução de boilerplate            |
+
+---
+
+## 🗂️ Entidades
+
+| Entidade      | Descrição                                                     |
+|---------------|---------------------------------------------------------------|
+| `Produto`     | Item do cardápio com nome, preço, categoria e disponibilidade |
+| `Cliente`     | Cliente cadastrado para pedidos de entrega                    |
+| `Entregador`  | Responsável pela entrega do pedido                            |
+| `Pedido`      | Pedido com tipo (balcão/entrega), status e total              |
+| `ItemPedido`  | Item dentro de um pedido com quantidade e preço snapshot      |
 
 ---
 
 ## 🏛️ Estrutura do projeto
 
-```text
+```
 src/
- ├── controller
- ├── service
- ├── repository
- ├── entity
- ├── dto
- ├── mapper
- ├── config
- └── exception
+ ├── controller      # Endpoints REST
+ ├── service         # Regras de negócio
+ ├── repository      # Acesso ao banco de dados
+ ├── entity          # Entidades JPA
+ ├── enums           # Enums de status e categorias
+ ├── dto             # Objetos de transferência de dados
+ ├── mapper          # Conversão entre entidades e DTOs
+ └── exception       # Tratamento global de erros
 ```
 
 ---
 
 ## ⚙️ Como executar
 
-**Pré-requisitos**
-- Java 21
-- Maven
-- MySQL
-- Docker e Docker Compose (opcional)
-
-**Execução local**
-```bash
-git clone https://github.com/vineog23-boop/gastrohub.git
-cd gastrohub
-mvn clean install
-mvn spring-boot:run
-```
+> 🚧 Em desenvolvimento.
 
 ---
 
-## 🐳 Infraestrutura
+## 🎯 Conceitos aplicados
 
-O projeto já possui:
-- Dockerfile
-- docker-compose.yml
-
-No estado atual do repositório, a infraestrutura já foi iniciada, mas a configuração da aplicação e do ambiente ainda precisa de alinhamento fino para uma execução mais padronizada.
-
----
-
-## 📝 Observações
-
-- O `application.properties` atual ainda utiliza configuração de datasource hardcoded
-- O projeto segue em evolução
-- Este README descreve o que já está presente no repositório hoje, sem antecipar funcionalidades não confirmadas
-
----
-
-## 🎯 Objetivos técnicos trabalhados
-
-- Organização em camadas
-- Persistência com JPA
-- Validação de dados
-- Estruturação de exceções
-- Segurança com Spring Security
-- Documentação técnica acadêmica
+- Arquitetura em camadas (Controller → Service → Repository)
+- Persistência com JPA/Hibernate
+- Relacionamentos `@ManyToOne` e `@OneToMany`
+- Enums persistidos com `@Enumerated(EnumType.STRING)`
+- Validação com Bean Validation
+- Tratamento global de erros com `@ControllerAdvice`
+- `ResponseEntity` com status HTTP semânticos
 
 ---
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **Vinícius Oliveira Gonçalves** como parte da formação em Java backend e da entrega do Tech Challenge — FIAP.
+Desenvolvido por **Vinícius Oliveira Gonçalves**
+[GitHub](https://github.com/vineog23-boop)
